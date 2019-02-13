@@ -113,3 +113,14 @@ id
 1039  Blake, William
 
 ```
+
+in this example, we need below columns
+```
+COLS_TO_USE = ['id', 'artist', 'title', 'medium', 'year', 'acquisitionYear', 'height', 'width', 'units']
+df = pd.read_csv('artwork_data.csv', index_col='id', usecols=COLS_TO_USE)
+```
+
+### save pandas data locally
+```angular2html
+df.to_pickle('df.pickle')
+```
